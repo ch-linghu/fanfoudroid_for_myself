@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest android:versionName="0.7.5.5"
-    xmlns:android="http://schemas.android.com/apk/res/android" package="com.ch_linghu.fanfoudroid" android:versionCode="20120220">
-    <uses-sdk android:minSdkVersion="4"/>
+    xmlns:android="http://schemas.android.com/apk/res/android" package="com.ch_linghu.fanfoudroid" android:versionCode="20120413">
     <supports-screens android:anyDensity="true"/>
-    <application android:icon="@drawable/icon"
+    <uses-sdk android:minSdkVersion="10"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+   <application android:icon="@drawable/icon"
         android:label="@string/app_name" android:name=".TwitterApplication">
         <meta-data android:name="android.app.default_searchable" android:value=".SearchResultActivity"/>
         <activity android:name="com.ch_linghu.fanfoudroid.TwitterActivity" android:label="@string/app_name" android:theme="@style/Theme.Fanfoudroid" 
@@ -178,13 +187,4 @@
 
         <!-- <service android:name="com.ch_linghu.fanfoudroid.service.WidgetService"/> -->
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-    <uses-feature android:name="android.hardware.camera" android:required="false"/>
-    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
 </manifest>

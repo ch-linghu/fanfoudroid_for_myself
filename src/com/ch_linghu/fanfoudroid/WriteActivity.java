@@ -361,6 +361,23 @@ public class WriteActivity extends BaseActivity {
 				}
 			});
 
+			// 加Tag符号“##”
+			ImageButton mAddTagButton = (ImageButton) findViewById(R.id.add_tag);
+			mAddTagButton.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+
+					int start = mTweetEditText.getSelectionStart();
+					int end = mTweetEditText.getSelectionEnd();
+					mTweetEditText.getText().replace(Math.min(start, end),
+							Math.max(start, end), "##");
+
+					// 将光标置于“##”之间
+					EditText inputField = mTweetEdit.getEditText();
+					Editable etext = inputField.getText();
+					Selection.setSelection(etext, start+1);
+				}
+			});
+
 			// 插入图片
 			chooseImagesButton = (ImageButton) findViewById(R.id.choose_images_button);
 			chooseImagesButton.setOnClickListener(new View.OnClickListener() {

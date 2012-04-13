@@ -71,10 +71,16 @@
 	    android:background="@drawable/send_message_block">
 		<!-- @某人 -->
 		<ImageButton android:layout_gravity="center_vertical"
+			android:visibility="gone"
 			android:id="@+id/add_user" android:background="@null"
 			android:layout_width="wrap_content" android:layout_height="wrap_content"
 			android:src="@drawable/toolbar_mention" android:layout_weight="0.2" />
-		<!-- 拍照按钮 -->
+		<!-- 自动加tag -->
+		<ImageButton android:layout_gravity="center_vertical"
+			android:id="@+id/add_tag" android:background="@null"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/ic_toolbar_tag_default" android:layout_weight="0.2" />
+				<!-- 拍照按钮 -->
 		<ImageButton android:layout_gravity="center_vertical"
 			android:id="@+id/camera_button" android:background="@null"
 			android:layout_width="wrap_content" android:layout_height="wrap_content"
